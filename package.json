@@ -1,0 +1,23 @@
+{
+  "name": "esencial",
+  "version": "1.0.0",
+  "description": "ejercicios nodejs esencial",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Melendez34/nodejs.git"
+  },
+  "author": "Omar Melendez Lopez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Melendez34/nodejs/issues"
+  },
+  "homepage": "https://github.com/Melendez34/nodejs#readme",
+  "dependencies": {
+    "audit": "^0.0.6",
+    "express": "^4.17.3"
+  }
+}
