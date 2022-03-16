@@ -27,3 +27,21 @@ let calcular = {
   },
 };
 console.log(calcular.doble(20), calcular.dividir(20));
+/*
+ * process execPath, env,  */
+console.log(process.execPath);
+
+var miModulo = require("./miModulo");
+
+console.log(miModulo.restar(30, 10));
+
+/*
+ * paquetes preinstalados http, url, path, fs
+ */
+var util = require("util");
+var http = require("http");
+var nombre = "Omar";
+console.log(util.format("nombre: %s ", nombre));
+
+var rand = Math.floor(Math.random() * 100);
+console.log("Numero random: " + rand);
