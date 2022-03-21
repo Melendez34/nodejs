@@ -1,0 +1,44 @@
+var boton = document.getElementById("boton");
+var contenedor = document.getElementById("contenedor");
+
+var posts = null;
+
+boton.addEventListener("click", function () {
+  fetch("http://jsonplaceholder.typicode.com/posts")
+    .then((data) => data.json())
+    .then((posts) => {
+      mostrarDatos(posts);
+    });
+});
+
+/* 
+function getPosts() {
+  return 
+}
+*/
+
+/*
+* function mostrarBanderas(countries) {
+  contenidoBandera.innerHTML = "";
+  countries.map((country, i) => {
+    let bandera = document.createElement("img");
+    bandera.src = country.flag;
+    bandera.width = "20";
+    bandera.height = "20";
+    contenidoBandera.appendChild(bandera);
+  });
+}
+*/
+
+function mostrarDatos(posts) {
+  posts.map((post, i) => {
+    let titulo = document.createElement("h1");
+    let contenido = document.createElement("p");
+
+    titulo.innerHTML = `${i + 1} ${post.title}`;
+    contenido.innerHTML = post.body;
+
+    contenedor.appendChild(titulo);
+    contenedor.appendChild(contenido);
+  });
+}
